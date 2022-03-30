@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main(){
+int main() {
    FILE *fileRead, *fileOverwritten;
    char filename[100], c;
    printf("Enter the name of the file whos content will be copied: \n");
@@ -8,7 +8,7 @@ int main(){
 
    // Open file for reading
    fileRead = fopen(filename, "r");
-   if (fileRead == NULL){
+   if (fileRead == NULL) {
      //If the file cannot be open, notify the user and exit.
       printf("Cannot open file %s \n", filename);
       exit(0);
@@ -18,7 +18,7 @@ int main(){
    scanf("%s", filename);
    // Open the file that will be overwritten
    fileOverwritten = fopen(filename, "w");
-   if (fileOverwritten == NULL){
+   if (fileOverwritten == NULL) {
      //If the file cannot be open, notify the user and exit.
       printf("Cannot open file %s \n", filename);
       exit(0);
@@ -26,7 +26,7 @@ int main(){
 
    // Read contents from the first file
    c = fgetc(fileRead);
-   while (c != EOF){
+   while (c != EOF) {
      //start copying the content from file 1 to file 2
       fputc(c, fileOverwritten);
       c = fgetc(fileRead);

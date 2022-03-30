@@ -1,5 +1,5 @@
-PROG := Q2-15
-SRCS := Q2-15.c
+PROG := Q3-14
+SRCS := Q3-14.c
 
 CC      := cc
 CFLAGS  := -Wall -Wextra -Werror
