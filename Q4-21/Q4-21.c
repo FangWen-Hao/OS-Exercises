@@ -10,8 +10,7 @@
 
 u_int32_t buffer[BUFFER_SIZE];
 
-void *getFibonacciNumber(void *param)
-{
+void *getFibonacciNumber(void *param) {
     int *p = param;
     int numberOfFibonacciNumbers = *p;
 
@@ -25,8 +24,7 @@ void *getFibonacciNumber(void *param)
     pthread_exit(0);
 }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
     pthread_t tid;
     pthread_attr_t attr;
     if (argc < 2) {
