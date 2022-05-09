@@ -1,3 +1,3 @@
 typedef struct{
-  int arr_len;
+  int arr_length;
 } args_struct;

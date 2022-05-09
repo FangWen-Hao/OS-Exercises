@@ -12,8 +12,8 @@ double g_PI = 0;
 
 void* monteCarlo(void* v_as) {
     args_struct* as = v_as;
-    int arr_len     = (*as).arr_len;
-    for (int i = 0; i < arr_len; i++) {
+    int arr_length     = (*as).arr_length;
+    for (int i = 0; i < arr_length; i++) {
         double random_x = rand()/(double)RAND_MAX;
         double random_y = rand()/(double)RAND_MAX;
         g_PI += random_x*random_x + random_y*random_y <= 1;
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
     }
 
     int numberOfPoints = atoi(argv[1]);
-    (*args).arr_len = numberOfPoints;
+    (*args).arr_length = numberOfPoints;
     v_args = (void*)(args);
     srand(time(NULL));
 
